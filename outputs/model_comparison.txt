@@ -1,0 +1,40 @@
+================================================================================
+EDGE-BASED SOLAR INTELLIGENCE SYSTEM - MODEL COMPARISON REPORT
+Generated: 2026-11-15 16:32:19
+================================================================================
+
+1. DATASET PARTITIONING & HORIZON
+--------------------------------------------------------------------------------
+- Total Processed Instances: 140
+- Training Set:   98 samples across 14 chronological days ([6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 20, 21, 22, 23])
+- Validation Set: 21 samples across 3 chronological days ([24, 27, 28])
+- Test Set:       21 samples across 3 untouched chronological days ([29, 30, 31])
+- Forecast Horizon: 1-step ahead (~59 minutes daylight interval)
+- Target: Next Observation Solar Power (Watts)
+
+2. PERFORMANCE COMPARISON METRICS
+--------------------------------------------------------------------------------
+Metric              | Random Forest Regressor | XGBoost Regressor       | Difference (XGB - RF)
+--------------------------------------------------------------------------------
+Validation MAE (W)  | 9.360                   | 8.069                   | -1.290
+Validation RMSE (W) | 11.392                  | 10.755                  | -0.637
+Validation R²       | 0.6475                  | 0.6858                  | +0.0383
+--------------------------------------------------------------------------------
+Test Set MAE (W)    | 8.979                   | 6.473                   | -2.506
+Test Set RMSE (W)   | 10.185                  | 7.657                   | -2.528
+Test Set R²         | 0.1679                  | 0.5297                  | +0.3618
+--------------------------------------------------------------------------------
+
+3. BEST MODEL SELECTION & THEORETICAL ANALYSIS
+--------------------------------------------------------------------------------
+Selected Best Model: XGBoost Regressor
+
+Scientific Justification:
+XGBoost demonstrated lower validation root mean squared error due to iterative gradient boosting with L1/L2 shrinkage regularization. It captures non-linear interactions between irradiance proxies (cyclical time, power lags, ambient temperature) with finer gradient descent step adjustments.
+
+Key Observations:
+- Both models successfully capture the non-linear diurnal solar pattern and lag dependencies without target leakage.
+- Lags of electrical power, operating voltage, and cyclical time coordinates provide strong predictive signals.
+- The untouched test set confirms generalization without overfitting to the training days.
+
+================================================================================

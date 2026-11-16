@@ -1,0 +1,121 @@
+{
+    "project_name": "Edge-Based Solar Intelligence System",
+    "model_name": "XGBoost Regressor",
+    "selected_best_model": "XGBoost Regressor",
+    "generation_timestamp": "2026-11-15T16:32:19.280952",
+    "input_features": [
+        "Temperature",
+        "Humidity",
+        "Voltage",
+        "Current",
+        "Power",
+        "power_lag_1",
+        "voltage_lag_1",
+        "current_lag_1",
+        "temp_lag_1",
+        "humidity_lag_1",
+        "power_trend",
+        "decimal_hour",
+        "sin_time",
+        "cos_time"
+    ],
+    "feature_order": {
+        "Temperature": 0,
+        "Humidity": 1,
+        "Voltage": 2,
+        "Current": 3,
+        "Power": 4,
+        "power_lag_1": 5,
+        "voltage_lag_1": 6,
+        "current_lag_1": 7,
+        "temp_lag_1": 8,
+        "humidity_lag_1": 9,
+        "power_trend": 10,
+        "decimal_hour": 11,
+        "sin_time": 12,
+        "cos_time": 13
+    },
+    "feature_units": {
+        "Temperature": "Celsius (\u00b0C)",
+        "Humidity": "Percent Relative Humidity (%)",
+        "Voltage": "Volts (V)",
+        "Current": "Amperes (A)",
+        "Power": "Watts (W)",
+        "power_lag_1": "Watts (W)",
+        "voltage_lag_1": "Volts (V)",
+        "current_lag_1": "Amperes (A)",
+        "temp_lag_1": "Celsius (\u00b0C)",
+        "humidity_lag_1": "Percent (%)",
+        "power_trend": "Watts (W)",
+        "decimal_hour": "Hours (0.0 to 24.0)",
+        "sin_time": "Dimensionless [-1.0, 1.0]",
+        "cos_time": "Dimensionless [-1.0, 1.0]"
+    },
+    "target_variable": "target_power",
+    "target_unit": "Watts (W)",
+    "forecast_horizon": "1-step ahead (~50 to 60 minutes ahead, matching daylight sampling frequency)",
+    "dataset_sampling_frequency": "Average 59.4 minutes between daylight samples (~9 daylight observations/day)",
+    "training_configuration": {
+        "train_days": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            13,
+            14,
+            15,
+            16,
+            17,
+            20,
+            21,
+            22,
+            23
+        ],
+        "val_days": [
+            24,
+            27,
+            28
+        ],
+        "test_days": [
+            29,
+            30,
+            31
+        ],
+        "train_samples": 98,
+        "val_samples": 21,
+        "test_samples": 21,
+        "best_hyperparameters": {
+            "n_estimators": 100,
+            "max_depth": 3,
+            "learning_rate": 0.05,
+            "subsample": 0.8
+        }
+    },
+    "evaluation_metrics": {
+        "random_forest": {
+            "val_mae": 9.359699497956223,
+            "val_rmse": 11.392256357948774,
+            "val_r2": 0.6475075933164365,
+            "test_mae": 8.97851477677922,
+            "test_rmse": 10.18543896862639,
+            "test_r2": 0.16785881979687134
+        },
+        "xgboost": {
+            "val_mae": 8.06935259137835,
+            "val_rmse": 10.755275188206111,
+            "val_r2": 0.6858237720479745,
+            "test_mae": 6.4728794642857155,
+            "test_rmse": 7.6574545505282074,
+            "test_r2": 0.5296660066570136
+        }
+    },
+    "dataset_source": "Historical daily solar photovoltaic measurements (data/raw/)",
+    "hardware_sensor_alignment": {
+        "esp32_mcu": "ESP32 DevKit V1",
+        "dht22": "Measures Temperature (\u00b0C) and Humidity (%)",
+        "ina219": "Measures Voltage (V), Current (mA converted to A), Power (mW converted to W)",
+        "lm393_ldr": "Digital light threshold status (HIGH/LOW) - NOT used for continuous irradiance to maintain valid physics",
+        "host_inference": "Python serial interface computes historical lags and executes model inference in real-time"
+    }
+}

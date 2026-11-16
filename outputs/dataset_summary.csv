@@ -1,0 +1,22 @@
+filename,day_number,records,columns_count,columns,missing_values,duplicates,time_start,time_end,avg_interval_min,min_interval_min,max_interval_min,max_p_vi_diff
+solar_data_mon_6th.csv,6,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:13,16:09,59.5,42.0,81.0,1.4594
+solar_data_tue_7th.csv,7,9,7,"Time, SolarIrradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:07,16:03,59.5,38.0,74.0,1.4842
+solar_data_wed_8th.csv,8,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:10,16:20,61.25,42.0,92.0,2.4973
+solar_data_thu_9th.csv,9,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:15,16:07,59.0,42.0,81.0,1.3385
+solar_data_fri_10th.csv,10,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:11,16:10,59.88,43.0,76.0,1.8831
+solar_data_mon_13th.csv,13,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:12,16:02,58.75,35.0,78.0,1.0318
+solar_data_tue_14th.csv,14,9,7,"Time, SolarIrradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:13,16:10,59.62,41.0,73.0,1.26
+solar_data_wed_15th.csv,15,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:20,16:03,57.88,45.0,76.0,1.5969
+solar_data_thu_16th.csv,16,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:15,16:04,58.62,38.0,92.0,1.705
+solar_data_fri_17th.csv,17,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:06,16:14,61.0,40.0,83.0,2.467
+solar_data_mon_20th.csv,20,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:09,16:14,60.62,50.0,74.0,1.3612
+solar_data_tue_21st.csv,21,9,7,"Time, SolarIrradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:18,16:05,58.38,39.0,83.0,2.7735
+solar_data_wed_22nd.csv,22,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:19,16:04,58.12,44.0,71.0,1.1269
+solar_data_thu_23rd.csv,23,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:10,16:09,59.88,41.0,69.0,2.3752
+solar_data_fri_24th.csv,24,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:16,16:18,60.25,45.0,78.0,3.6534
+solar_data_mon_27th.csv,27,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:07,16:01,59.25,49.0,67.0,1.279
+solar_data_tue_28st.csv,28,9,7,"Time, SolarIrradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:18,16:05,58.38,39.0,83.0,2.7735
+solar_data_tue_28th.csv,28,9,7,"Time, SolarIrradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:21,16:10,58.62,42.0,77.0,1.4022
+solar_data_wed_29th.csv,29,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:05,16:08,60.38,51.0,72.0,1.4612
+solar_data_thu_30th.csv,30,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:16,16:06,58.75,48.0,77.0,1.1554
+solar_data_fri_31st.csv,31,9,7,"Time, Solar Irradiance, Temperature, Humidity, Current, Voltage, Power",0,0,8:08,16:04,59.5,43.0,74.0,1.6771
